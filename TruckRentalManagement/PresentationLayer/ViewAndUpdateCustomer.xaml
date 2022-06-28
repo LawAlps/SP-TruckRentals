@@ -1,0 +1,94 @@
+﻿<Window x:Class="TruckRentalManagement.PresentationLayer.ViewAndUpdateCustomer"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TruckRentalManagement.PresentationLayer"
+        mc:Ignorable="d"
+        Title="ViewAndUpdateCustomer" Height="500" Width="800">
+    <Grid Background="#121212">
+        <Grid Height="500">
+            <Label Content="Enter Customer ID:" FontSize="20" Foreground="LightGray" HorizontalAlignment="Left" Margin="26,38,0,0" VerticalAlignment="Top"/>
+            <TextBox Name="customerIDTextBox" FontSize="20" HorizontalAlignment="Left" Margin="228,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="172" Height="37" RenderTransformOrigin="0.895,0.501"/>
+            <Button Name="searchCustomerID" Content="Search ID" Foreground="White"  Width="100" Height="50" HorizontalAlignment="Right" HorizontalContentAlignment="Left" Margin="0,31,222,403" Click="searchCustomerID_Click">
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}">
+                        <Setter Property="Background" Value="#272727"/>
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type Button}">
+                                    <Border Background="{TemplateBinding Background}">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="DarkSlateGray"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+            </Button>
+
+            <Button Name="returnButton" Content="Return" Foreground="White"  Width="100" Height="50" HorizontalAlignment="Right" HorizontalContentAlignment="Left" Margin="0,31,70,403" Click="returnButton_Click">
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}">
+                        <Setter Property="Background" Value="#272727"/>
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type Button}">
+                                    <Border Background="{TemplateBinding Background}">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="DarkSlateGray"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+            </Button>
+            <Canvas Name="searchPanel" Margin="0,100,0,0">
+                <Label Content="Name:" Canvas.Left="57" Canvas.Top="20" FontSize="20" Foreground="LightGray" />
+                <TextBox Name="nameTextBox" Canvas.Left="205" Canvas.Top="28" FontSize="20" TextWrapping="Wrap" Width="148"/>
+                <Label Content="Address:" Canvas.Left="57" Canvas.Top="74" FontSize="20" Foreground="LightGray" />
+                <TextBox Name="addressTextBox" Canvas.Left="205" Canvas.Top="78" FontSize="20" TextWrapping="Wrap" Width="148"/>
+                <Label Content="Telephone:" Canvas.Left="57" Canvas.Top="121" FontSize="20" Foreground="LightGray" />
+                <TextBox Name="telephoneTextBox" Canvas.Left="205" Canvas.Top="129" FontSize="20" TextWrapping="Wrap" Width="148"/>
+                <Label Content="Age:" Canvas.Left="57" Canvas.Top="175" FontSize="20" Foreground="LightGray" />
+                <TextBox Name="ageTextBox" Canvas.Left="205" Canvas.Top="179" FontSize="20" TextWrapping="Wrap" Width="148"/>
+                <Label Content="License Number:" Canvas.Left="410" Canvas.Top="31" FontSize="20" Foreground="LightGray" />
+                <TextBox Name="licenseNumberTextBox" IsReadOnly="True" Canvas.Left="590" Canvas.Top="35" FontSize="20" TextWrapping="Wrap" Width="148"/>
+                <Label Content="License Exp Date:" Canvas.Left="410" Canvas.Top="88" FontSize="20" Foreground="LightGray" />
+                <DatePicker Name="licenseExpiryDatePicker" Canvas.Left="590" Canvas.Top="94" Width="148" Height="30"/>
+                <Button Name="updateButton" Content="Update" Foreground="White"  Width="100" Height="50" HorizontalContentAlignment="Left" Margin="0,35,220,349" Canvas.Left="457" Canvas.Top="121" Click="updateButton_Click">
+                    <Button.Style>
+                        <Style TargetType="{x:Type Button}">
+                            <Setter Property="Background" Value="#272727"/>
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type Button}">
+                                        <Border Background="{TemplateBinding Background}">
+                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="DarkSlateGray"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+                </Button>
+            </Canvas>
+
+        </Grid>
+    </Grid>
+</Window>

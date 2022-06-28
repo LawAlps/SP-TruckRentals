@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="MainWindowStaff.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="PresentationLayer\AddNewCustomer.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="PresentationLayer\AddNewEmployee.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="PresentationLayer\LoginForm.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="PresentationLayer\ViewAndUpdateCustomer.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="PresentationLayer\ViewAndUpdateEmployee.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="PresentationLayer\ViewAndUpdateUser.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MainWindowStaff.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="PresentationLayer\AddNewCustomer.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="PresentationLayer\AddNewEmployee.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="PresentationLayer\LoginForm.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="PresentationLayer\ViewAndUpdateCustomer.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="PresentationLayer\ViewAndUpdateEmployee.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="PresentationLayer\ViewAndUpdateUser.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

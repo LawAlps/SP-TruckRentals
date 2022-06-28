@@ -1,0 +1,80 @@
+﻿<Window x:Class="TruckRentalManagement.PresentationLayer.AddNewCustomer"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TruckRentalManagement.PresentationLayer"
+        mc:Ignorable="d"
+        Title="AddNewCustomer" Height="370" Width="300">
+    <StackPanel Background="#121212">
+        <StackPanel Orientation="Horizontal" Margin="5">
+            <Label Content="Name:        " Foreground="LightGray" FontSize="15" Padding="5"/>
+            <TextBox Name="nameTextBox" Width="130" FontSize="15" Height="20"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="5">
+            <Label Content="Address:     " Foreground="LightGray" FontSize="15" Padding="5"/>
+            <TextBox Name="addressTextBox" Width="130" FontSize="15" Height="20"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="5">
+            <Label Content="Telephone: " Foreground="LightGray" FontSize="15" Padding="5"/>
+            <TextBox  Name="telephoneTextBox" Width="130" FontSize="15" Height="20"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="5">
+            <Label Content="License No: " Foreground="LightGray" FontSize="15" Padding="5"/>
+            <TextBox Name="licenseNumberTextBox" Width="130" FontSize="15" Height="20"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="5">
+            <Label Content="Age:            " Foreground="LightGray" FontSize="15" Padding="5"/>
+            <TextBox  Name="ageTextBox" Width="130" FontSize="15" Height="20"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="5">
+            <Label Content="License Exp:" Foreground="LightGray" FontSize="15" Padding="5"/>
+            <DatePicker Name="licenseExpiryDatePicker" HorizontalAlignment="Left"  Width="130" FontSize="15" Height="30"/>
+        </StackPanel>
+
+        <DockPanel Width="250" Margin="5">
+            <Button Name="returnButton" Content="Return" Foreground="White" HorizontalAlignment="Left" Width="100" Height="40" HorizontalContentAlignment="Left" Click="returnButton_Click">
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}">
+                        <Setter Property="Background" Value="#272727"/>
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type Button}">
+                                    <Border Background="{TemplateBinding Background}">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="DarkSlateGray"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+            </Button>
+            <Button Name="addEmployeeButton" Content="Add Customer" Foreground="White"  Width="100" Height="40" Click="addEmployeeButton_Click" HorizontalAlignment="Right" HorizontalContentAlignment="Left" Margin="15">
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}">
+                        <Setter Property="Background" Value="#272727"/>
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type Button}">
+                                    <Border Background="{TemplateBinding Background}">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="DarkSlateGray"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+            </Button>
+        </DockPanel>
+    </StackPanel>
+</Window>
